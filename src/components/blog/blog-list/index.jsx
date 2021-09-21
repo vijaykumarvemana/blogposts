@@ -12,7 +12,7 @@ export default class BlogList extends Component {
   async componentDidMount() {
     try {
       const apiUrl = process.env.REACT_APP_BE_URL
-      const response = await fetch(`${apiUrl}/blogPosts`);
+      const response = await fetch(`${apiUrl}/blogPosts`)
       const posts = await response.json()
       this.setState({ posts })
       console.log(posts)
@@ -25,7 +25,7 @@ export default class BlogList extends Component {
   render() {
     return (
       <Row>
-        {this.state.posts.map((post) => (
+        {posts.map((post) => (
           <Col md={4} style={{ marginBottom: 50 }}>
             <BlogItem key={post.title} {...post} />
           </Col>
