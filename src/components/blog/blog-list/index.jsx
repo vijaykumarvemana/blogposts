@@ -3,6 +3,25 @@ import { Row, Col } from "react-bootstrap";
 import BlogItem from "../blog-item";
 import posts from "../../../data/posts.json";
 export default class BlogList extends Component {
+
+
+  state = {
+    posts: []
+  }
+
+  async componentDidMount() {
+    try {
+      const apiUrl = process.env.REACT_APP_BE_URL
+      const response = await fetch(`${apiUrl}/blogPosts`);
+      const posts = await response.json()
+      this.setState({ posts })
+      console.log(posts)
+    } catch(e) {
+      console.log(e);
+    }
+  }
+
+   
   render() {
     return (
       <Row>
