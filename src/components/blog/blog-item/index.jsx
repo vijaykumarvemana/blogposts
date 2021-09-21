@@ -6,21 +6,21 @@ import "./styles.css";
 export default class BlogItem extends Component {
 
 
-  state = {
-    authors: []
-  }
+  // state = {
+  //   authors: []
+  // }
 
-  async componentDidMount() {
-    try {
-      const apiUrl = process.env.REACT_APP_BE_URL
-      const response = await fetch(`${apiUrl}/authors`);
-      const authors = await response.json()
-      this.setState({ authors })
-      console.log(authors)
-    } catch(e) {
-      console.log(e);
-    }
-  }
+  // async componentDidMount() {
+  //   try {
+  //     const apiUrl = process.env.REACT_APP_BE_URL
+  //     const response = await fetch(`${apiUrl}/authors`);
+  //     const authors = await response.json()
+  //     this.setState({ authors })
+  //     console.log(authors)
+  //   } catch(e) {
+  //     console.log(e);
+  //   }
+  // }
   render() {
     const { title, cover, author, _id } = this.props;
     return (
