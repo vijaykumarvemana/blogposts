@@ -30,6 +30,15 @@ export default class NavBar extends Component {
             </svg>
             Post Article
           </Button>
+          <Button
+            as={Link}
+            to="/register"
+            className="bg-dark"
+            size="lg"
+          >
+            
+            Register
+          </Button>
         </Container>
       </Navbar>
     );
