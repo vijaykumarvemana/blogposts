@@ -1,7 +1,7 @@
 import React from "react"
 import {Form, Container, Button} from 'react-bootstrap'
 import {useState} from 'react'
-import { Axios } from "axios"
+
 
 const Registration = ({history}) =>{
     const [first_name, setFirst] = useState('')
